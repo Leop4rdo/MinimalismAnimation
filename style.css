@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Roboto", sans-serif;
+}
+
+h1{
+    width: 100%;
+    opacity: 0;
+
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 3px;
+    color: #8e44ad;
+
+    animation-name: h1Appear;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes h1Appear{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 100%;
+    }
+}
+
+h1::before{
+    content: "";
+    display: block;
+    background-color: #8e44ad;
+
+    width: 0px;
+    height: 5px;
+
+    margin: auto;
+
+    animation-name: h1BeforeAppear;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes h1BeforeAppear{
+    0%{
+        width: 0px;
+    }
+
+    100%{
+        width: 250px;
+    }
+}
+
+h1::after{
+    content: "";
+    display: block;
+    background-color: #8e44ad;
+
+    width: 0px;
+    height: 5px;
+    
+    margin: auto;
+    animation-name: h1afterAppear;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes h1afterAppear{
+    0%{
+        width: 0px;
+    }
+
+    100%{
+        width: 250px;
+    }
+}
+
+p{
+    font-size: 18px;
+    color: #34495e;
+
+    opacity: 0;
+
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
